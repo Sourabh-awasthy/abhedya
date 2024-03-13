@@ -5,9 +5,21 @@
 /**
  * copyright 2022 codewithsadee
  */
+ @font-face {
+  font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 400;
+src: url(../../../public/font/Poppins-Black.ttf)
+}
 
 
 
+@font-face {
+  font-family: "MODERN WARFARE";
+font-style: normal;
+font-weight: 400;
+src: url(../../../public/font/ModernWarfare-OV7KP.ttf)
+}
 
 
 /*-----------------------------------*\
@@ -99,6 +111,32 @@
     --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
   
   }
+  .section{
+    background-image: url(../../../public/image/bg.png);
+    height: auto;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container2 {
+  width:100%;
+  height: 500px;
+  /* background-position: center;
+  background-size: cover; */
+  
+
+}
+.container3 {
+  width: 100%;
+  height:auto;
+  margin-top: 8ch;
+}
+.readmoretext {
+  color: azure;
+  text-align: center;
+}
   
   
   
@@ -107,14 +145,10 @@
   /*-----------------------------------*\
     #RESET
   \*-----------------------------------*/
+
   
-  *,
-  *::before,
-  *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  
+
   
   li { list-style: none; }
   
@@ -133,14 +167,8 @@
   
   img { height: auto; }
   
-  input,
-  button {
-    background: none;
-    border: none;
-    font: inherit;
-  }
-  
-  input { width: 100%; }
+
+
   
   button { cursor: pointer; }
   
@@ -225,7 +253,7 @@
   }
   
   .btn::after {
-    content: "";
+
     position: absolute;
     top: 0;
     bottom: 0;
@@ -269,7 +297,7 @@
   }
   
   .section-title::after {
-    content: url("../../../public/image/title-underline.png");
+    /* content: url("title-underline.png"); */
     position: absolute;
     top: 100%;
     left: 50%;
@@ -362,12 +390,24 @@
     align-items: center;
   }
   
+
+  /* font of abhedya */
+
+
   .logo {
     color: var(--white);
-    font-family: var(--ff-oxanium);
+
     font-size: 3rem;
     font-weight: var(--fw-800);
+   
+
   }
+
+
+
+
+
+
   
   .header-actions {
     display: flex;
@@ -447,11 +487,11 @@
   }
   
   .hero-subtitle {
-    /* color: var(--marigold); */
-    background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
+    color: var(--marigold); 
+    /* background: linear-gradient(to right, #f32170, #ff6b08,#cf23cf, #eedd44);
     -webkit-text-fill-color: transparent;
-    /* -webkit-background-clip: text; */
-    font-size: var(--fs-6);
+    -webkit-background-clip: text;
+    font-size: var(--fs-6); */
     font-weight: var(--fw-700);
     text-transform: uppercase;
   }
@@ -491,7 +531,7 @@
   \*-----------------------------------*/
   
   
-  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
   
   
   
@@ -561,6 +601,7 @@
     text-decoration: none;
     opacity: 0.75;
     font-weight: 300;
+
   }
   
   .menu__link:hover {
@@ -580,7 +621,7 @@
     left: 0;
     width: 100%;
     height: 100px;
-  
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
     background-size: 1000px 100px;
   }
   
@@ -804,13 +845,11 @@
   
   
   
-  
-  
     /**
      * FOOTER
      */
   
-    .footer-brand
+    .footer-brand,
     .footer-wrapper { grid-column: auto; }
   
     .footer-bottom-img { display: block; }
@@ -865,7 +904,6 @@
   
     .header-top {
       display: block;
-      background-image: url(../../../public/image/title-underline.png);
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -1162,4 +1200,555 @@
     .footer .container { grid-template-columns: 1fr 0.7fr 0.7fr 1fr; }
   
   }
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+
+  :root {
+    --bar-scale-y: 0;
+    --sparkle-color: rgb(253 244 215 / 40%);
+  }
   
+  @keyframes pop-word {
+    to {
+      transform: rotateX(0);
+    }
+  }
+  
+  @keyframes show {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bar-scale {
+    to {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes sparkle {
+    0% {
+      transform: scale(0);
+    }
+  
+    60% {
+      transform: scale(1) translate(4px, 1px) rotate(8deg);
+    }
+  
+    100% {
+      transform: scale(0) translate(4px, 1px) rotate(8deg);
+    }
+  }
+  
+  @keyframes shimmer {
+    to {
+      text-shadow: 0 0 8px red;
+    }
+  }
+
+  
+
+  h1 {
+    color: white;
+  font-family: 'cursive';
+    font-size: 8rem;
+  
+    line-height: 1;
+    perspective: 500px;
+  }
+  
+  .word {
+    display: block;
+  
+    animation: show 0.01s forwards, pop-word 1.5s forwards;
+    animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+    opacity: 0;
+    font-family: 'cursive';
+    transform: rotateX(120deg);
+    transform-origin: 50% 100%;
+  }
+  
+  .word:nth-of-type(2) {
+    padding: 0 2rem;
+    font-family: 'cursive';
+    animation-delay: 1.5s;
+  
+    color: gold;
+  }
+  
+  .superscript {
+    position: relative;
+    animation-delay: 1.5s;
+  
+    animation-duration: 10s;
+    animation-name: shimmer;
+    font-family: 'Space Age', sans-serif;
+  
+    vertical-align: text-top;
+  }
+  
+
+  .superscript::before {
+    --bar-width: 25%;
+  
+    position: absolute;
+  
+    top: 37%;
+    left: 47%;
+    width: 14%;
+    height: 48%;
+  
+    animation: bar-scale 0.25s linear 3s 1 forwards;
+  
+    background: linear-gradient(
+      to right,
+      white var(--bar-width),
+      transparent var(--bar-width) calc(100% - var(--bar-width)),
+      white calc(100% - var(--bar-width))
+    );
+  
+    content: "";
+  
+    transform: scaleY(var(--bar-scale-y));
+  }
+  
+  /* sparkle */
+  .superscript::after {
+    --size: 10rem;
+  
+    position: absolute;
+  
+    top: -5%;
+    left: -85%;
+  
+    width: var(--size);
+    height: var(--size);
+  
+    animation: sparkle 0.4s linear 3.5s 1 forwards;
+  
+    background: radial-gradient(
+        circle at center,
+        rgb(252 249 241 / 94%) 0% 7%,
+        transparent 7% 100%
+      ),
+      conic-gradient(
+        transparent 0deg 18deg,
+        var(--sparkle-color) 18deg,
+        transparent 20deg 40deg,
+        var(--sparkle-color) 40deg,
+        transparent 43deg 87deg,
+        var(--sparkle-color) 87deg,
+        transparent 95deg 175deg,
+        var(--sparkle-color) 175deg,
+        transparent 178deg 220deg,
+        var(--sparkle-color) 220deg,
+        transparent 222deg 270deg,
+        var(--sparkle-color) 270deg,
+        transparent 275deg 300deg,
+        var(--sparkle-color) 300deg,
+        transparent 303deg 360deg
+      );
+  
+    border-radius: 50%;
+    clip-path: polygon(
+      50% 0,
+      59.13% 26.64%,
+      85.13% -2.35%,
+      100% 50%,
+      50% 100%,
+      0 50%,
+      31.39% 34.86%
+    );
+  
+    content: "";
+  
+    filter: blur(1px);
+  
+    transform: scale(0);
+  }
+  
+  @media screen and (max-width: 600px) {
+    h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      display: block;
+      
+
+    }
+
+    #presents{
+        margin-left: 20px;
+        font-size: 2.5rem;
+        margin-top: 150px;
+        font-family:"MODERN WARFARE" ;
+        
+    }
+    #Abhedya{
+        font-size: 2.5rem;
+        font-family:"MODERN WARFARE" ;
+
+       
+    }
+     /* sparkle */
+   .superscript::after {
+    --size: 6rem;
+    margin-left: -50px;
+    }
+  
+  
+}
+
+#presents{
+margin-left: 20px;
+font-size: 7rem;
+margin-top: 200px;
+font-family:"MODERN WARFARE" ;
+margin-top: -3%;
+margin-left: -100px;
+
+
+}
+#Abhedya{
+font-size: 7rem;
+font-family:"MODERN WARFARE" ;
+color: white;
+font-size: rem;
+margin-left: -100px;
+padding-bottom: 100px;
+
+}
+
+.section-title{
+  font-family: 'Space Age', sans-serif;   
+  font-size: 5rem;
+  margin: auto;
+margin-top: 0%;
+
+
+}
+
+
+#aboutcontent{
+  height: 500px;
+  margin-top: 0;
+  font-size: 4rem;
+  color: white;
+  font-family: cursive;
+color: white ;
+background-color: rgb(61, 46, 51,.5);
+border-radius: 20px;
+box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+
+}
+
+.hero-title{
+
+  font-family: 'Space Age', sans-serif;   
+  font-size: 5rem;
+
+
+}
+
+.hero-text{
+  font-size: 2.7rem;
+  font-family: cursive;
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+#presents{
+
+margin: auto;
+font-size: 5rem;
+
+font-family:"MODERN WARFARE" ;
+
+
+}
+#Abhedya{
+font-size: 5.5rem;
+font-family:"MODERN WARFARE" ;
+
+margin: auto;
+}
+
+.section-title{
+  font-family: 'Space Age', sans-serif;   
+  font-size: 5rem;
+  margin: auto;
+margin-top: 0%;
+
+
+}
+
+
+#aboutcontent{
+
+  margin-top: 0;
+  font-size: 4rem;
+  color: white;
+  font-family: cursive;
+color: white ;
+background-color: rgb(61, 46, 51,.5);
+border-radius: 20px;
+box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+
+}
+
+.hero-title{
+
+  font-family: 'Space Age', sans-serif;   
+  font-size: 5rem;
+  margin-top: 10%;
+
+}
+
+.hero-text{
+  font-size: 3rem;
+  font-family: cursive;
+}
+
+
+
+ 
+ }
+
+ @media (max-width: 1000px) {
+
+  #presents{
+
+  margin-left: 20px;
+  font-size: 6.5rem;
+  margin-top:-100px;
+  font-family:"MODERN WARFARE" ;
+  
+  
+  }
+  #Abhedya{
+  font-size: 6.5rem;
+  font-family:"MODERN WARFARE" ;
+  margin-left: 20px;
+  }
+  
+  .section-title{
+    font-family: 'Space Age', sans-serif;   
+    font-size: 5rem;
+    margin: auto;
+  margin-top: -10%;
+  
+  
+  }
+  
+  
+  #aboutcontent{
+  
+    margin-top: 0;
+    font-size: 3.3rem;
+    color: white;
+    font-family: cursive;
+  color: white ;
+  background-color: rgb(61, 46, 51,.5);
+  border-radius: 20px;
+  box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+  
+  }
+  
+  .hero-title{
+  
+    font-family: 'Space Age', sans-serif;   
+    font-size: 6rem;
+    margin-top: 10%;
+  
+  }
+  
+  .hero-text{
+    font-size: 3rem;
+    font-family: cursive;
+  }
+  
+  
+   
+   } 
+
+
+@media (max-width: 760px) {
+
+#presents{
+margin-left: 20px;
+font-size: 5rem;
+margin-top: 15%;
+font-family:"MODERN WARFARE" ;
+
+
+}
+#Abhedya{
+font-size: 5rem;
+font-family:"MODERN WARFARE" ;
+margin-left: 20px;
+}
+
+.section-title{
+  font-family: 'Space Age', sans-serif;   
+  font-size: 4rem;
+  margin: auto;
+margin-top: -10%;
+
+
+}
+
+
+#aboutcontent{
+
+  margin-top: 0;
+  font-size: 3.3rem;
+  color: white;
+  font-family: cursive;
+color: white ;
+background-color: rgb(61, 46, 51,.5);
+border-radius: 20px;
+box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+
+}
+
+.hero-title{
+
+  font-family: 'Space Age', sans-serif;   
+  font-size: 4rem;
+
+}
+
+.hero-text{
+  font-size: 3rem;
+  font-family: cursive;
+}
+
+
+
+
+
+}
+@media (max-width: 560px) {
+
+#presents{
+
+font-size: 4.5rem;
+margin-top: 10px;
+font-family:"MODERN WARFARE" ;
+margin-left: -20px;
+
+}
+#Abhedya{
+font-size: 4.5rem;
+font-family:"MODERN WARFARE" ;
+margin-left: -40px;
+margin-top: 10px;
+}
+
+.section-title{
+  font-family: 'Space Age', sans-serif;   
+  font-size: 3rem;
+  margin: auto;
+  margin-top: -17%;
+
+
+
+}
+
+
+#aboutcontent{
+  margin-top: 0;
+  font-size: 3rem;
+  color: white;
+  font-family: cursive;
+color: white ;
+background-color: rgb(61, 46, 51,.5);
+border-radius: 20px;
+box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+}
+
+.hero-title{
+
+  font-family: 'Space Age', sans-serif;   
+  font-size: 3.5rem;
+
+}
+
+.hero-text{
+  font-size: 2.3rem;
+  font-family: cursive;
+}
+
+
+
+}
+
+
+@media (max-width: 390px) {
+
+  #presents{
+  margin-left: 20px;
+  font-size: 3.6rem;
+  margin-top: 0px;
+  font-family:"MODERN WARFARE" ;
+  margin-left: -0px;
+  
+  
+  }
+  #Abhedya{
+  font-size: 3.6rem;
+  
+  font-family:"MODERN WARFARE" ;
+  margin-left: 20px;
+  }
+  
+
+ .section-title{
+  font-family: 'Space Age', sans-serif;   
+  font-size: 3rem;
+  margin: auto;
+  margin-top: -25%;
+
+}
+
+
+#aboutcontent{
+
+  height: 600px;
+  margin-top: -13%;
+  font-size: 2.7rem;
+  color: white;
+  font-family: cursive;
+color: white ;
+background-color: rgb(61, 46, 51,.5);
+border-radius: 20px;
+box-shadow: rgba(241, 239, 239, 0.25) 0px 54px 55px, rgba(249, 247, 247, 0.12) 0px -12px 30px, rgba(239, 237, 237, 0.12) 0px 4px 6px, rgba(249, 248, 248, 0.17) 0px 12px 13px, rgba(247, 245, 245, 0.09) 0px -3px 5px;
+}
+
+.hero-title{
+  margin-top: -20px;
+  font-family: 'Space Age', sans-serif;   
+  font-size: 3rem;
+
+}
+
+.hero-text{
+  font-size: 2.3rem;
+  font-family: cursive
+  
+}
+}

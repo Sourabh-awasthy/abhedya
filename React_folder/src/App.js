@@ -6,10 +6,21 @@ import Signup from "./components/Sign_up/Signup";
 import Leaderboard from "./components/Leaderboard/Leaderboard";
  import Rules from "./components/Rules/Rules";
 import Forgot from "./components/Forgot/Forgot";
+// import Faqs from "./components/Faq/Faq";
+
+
+
 
 // import Home from "./components/Home_page/Home"
 import Timelines from "./components/timeline/timeline";
-import Navbar_new from "./components/Navbar_new/Navbar_new";
+import Fnav from "./components/Final_navbar/navbar";
+import Fhome from "./components/Final_home/home";
+import Game from "./components/Game/game";
+import Footer from "./components/footer/footer";
+
+
+
+
 
 
 
@@ -36,15 +47,20 @@ function App(){
     <Routes>
 
 
-       <Route path="/Login" element={<> <Navbar_new/><Login/></> }/>  
-      <Route path="/Signup" element={<> <Navbar_new/> <Signup/></> }/>
-      {/* <Route path="/New_home" element={<> <Newhome/></> }/>   */}
-      <Route path="/Leaderboard" element={<>  <Navbar_new/><Leaderboard/></> }/> 
-       <Route path="/Rules" element={<> <Navbar_new/><Rules/> </>}/> 
-       <Route path="/Forgot" element={<><Navbar_new/><Forgot/> </>}/> 
-       <Route path="/" element={<><Navbar_new/><Timelines/> </>}/>  
-        {/* <Route path="/" element={<><Home/> </>}/>    */}
-        <Route path="/Nav" element={<> <Navbar_new/></> }/> 
+        <Route path="/" element={<div className="App"> <Fnav/><Fhome/><Footer/> </div>}/> 
+        <Route path="/Sign" element={<div className="App"><> <Fnav/><Signup/><Footer/></></div> }/> 
+        <Route path="/Leaderboard" element={<div className="App"><> <Fnav/><Leaderboard/><Footer/></></div> }/> 
+        <Route path="/Time" element={<div className="App"><> <Fnav/><Timelines/><Footer/></></div>}/> 
+        <Route path="/Game" element={<div className="App"><> <Fnav/><Game/><Footer/></> </div>}/> 
+        <Route path="/rules" element={<div className="App"><> <Fnav/><Rules/><Footer/></></div> }/> 
+        <Route path="/forgot" element={<div className="App"><> <Fnav/><Forgot/><Footer/></> </div>}/> 
+        <Route path="/login" element={<div className="App"><> <Fnav/><Login/><Footer/></></div> }/> 
+        <Route path="/nav" element={<div className="App"><> <Fnav/></> </div>}/> 
+
+
+
+
+
     
 
 

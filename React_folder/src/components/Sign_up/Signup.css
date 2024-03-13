@@ -1,12 +1,5 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik+Doodle+Shadow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik+Doodle+Shadow&family=Rubik:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Rubik+Doodle+Shadow&family=Rubik:wght@300&family=Space+Mono&display=swap');
-@import url('https://fonts.cdnfonts.com/css/space-age');
-
 html{
 font-size: 20px;
 }
@@ -22,7 +15,7 @@ background-image: url(../../../public/image/bg.png);
 color: white;
 background-size: cover;
 background-repeat:  no-repeat;
-height: 120vh;
+
 background-position: center;
 backdrop-filter: blur(5px);
 padding: 20px;
@@ -36,9 +29,9 @@ background-color:rgb(167, 99, 66,.3)  ;
 border-radius: 20px;
 box-shadow: rgba(9, 9, 9, 0.25) 0px 54px 55px, rgba(2, 0, 0, 0.12) 0px -12px 30px, rgba(14, 6, 6, 0.12) 0px 4px 6px, rgba(16, 15, 15, 0.17) 0px 12px 13px, rgba(3, 1, 1, 0.09) 0px -3px 5px;
 width: 450px;
-height: 780px;
-margin-left: 490px;
-margin-top: 40px;
+height: 700px;
+margin: auto;
+margin-top: 100px;
 }
 
 .mainsignup{
@@ -46,9 +39,9 @@ background-color:rgb(167, 99, 66,.3)  ;
 border-radius: 20px;
 box-shadow: rgba(9, 9, 9, 0.2) 0px 54px 55px, rgba(2, 0, 0, 0.1) 0px -12px 30px, rgba(14, 6, 6, 0.1) 0px 4px 6px, rgba(16, 15, 15, 0.15) 0px 12px 13px, rgba(3, 1, 1, 0.09) 0px -3px 5px;
 width: 450px;
-height: 780px;
+height: 700px;
 margin-left: 0px;
-margin-top: 40px;
+margin-top: 50px;
 }
 .headersignup{
 text-align: center;
@@ -61,14 +54,14 @@ h1{
     font-family: Arial, Helvetica, sans-serif
 }
 form{
-margin-top: 10px;
-font-size: 1.5rem;
+margin-top: 15px;
+font-size: 2.5rem;
 }
 
 .componentssignup{
 display: flex;
 flex-direction: column;
-margin-top: 30px;
+margin-top: 0px;
 margin-left: 60px;
 }
 
@@ -77,14 +70,14 @@ width: 350px;
 height: 40px;
 border: solid white 1px;
 border-radius: 5px;
-margin-top: 20px;
+margin-top: 5px;
 background-color: white;
 
 font-size: 20px;
 }
 .buttonsignup{
 margin-left: 60px;
-margin-top: 40px;
+margin-top: 30px;
 
 }
 
@@ -109,7 +102,7 @@ border: solid white 4px;
 
 margin-top: 30px;
 text-align: center;
-font-size: 1.2rem;
+font-size: 2rem;
 
 
 }
@@ -117,39 +110,110 @@ font-size: 1.2rem;
 margin-top: 20px;
 }
 
-a:hover{
-font-size: 1.3rem;
-}
+
+
+
+@media screen and (max-width: 1000px) {
+    .cardsignup,
+    .mainsignup {
+    width: 80%;
+    margin: 0;
+    margin-top: 100px;
+    height: 600px;
+    margin-left: 10%;
+    }
+
+     .mainsignup{
+        width: 80%;
+     }
+    
+    .buttonsignup {
+    margin-left: 8%;
+    margin-top: 0px;
+    }
+    
+    input {
+    width: 80%;
+    }
+    
+    
+    
+    .componentssignup{
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+    margin-left: 60px;
+    }
+    
+    .text{
+    
+        margin-top: 10px;
+        text-align: center;
+        font-size: 2rem;
+        
+        
+        }
+    
+    }
 
 
 
 @media screen and (max-width: 768px) {
 .cardsignup,
 .mainsignup {
-width: 100%;
+width: 80%;
 margin: 0;
+margin-top: 100px;
+height: 600px;
+margin-left: 10%;
+}
 
-
-
-
+.mainsignup{
+    width: 80%;
+    margin-left: 10%;
 }
 
 .buttonsignup {
-margin-left: 60px;
+margin: auto;
+margin-left: 10%;
 }
 
 input {
 width: 80%;
 }
+
+
+
 .componentssignup{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-left: 60px;
+display: flex;
+flex-direction: column;
+margin-top: -10px;
+margin-left: 60px;
+}
+
+.text{
+
+    margin-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    
+    
     }
+
 }
 
 @media screen and (max-width: 480px) {
+
+    .cardsignup{
+        width: 100%;
+        margin-left: -5%;
+
+    }
+
+    .mainsignup{
+        width: 100%;
+
+    }
 .headersignup {
 font-size: 1rem;
 }

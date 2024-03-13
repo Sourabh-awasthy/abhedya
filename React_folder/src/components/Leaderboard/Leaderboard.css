@@ -1,22 +1,17 @@
-body {
+@font-face {
+  font-family: 'Space Age';
+  font-style: normal;
+  font-weight: 400;
+ src: url(../../../public/font/space-age/space\ age.ttf);
+}
 
-       margin: 0;
-       padding: 0;
-       margin: 0;
-                 background-image: url(../../../public/image/bg.png);
-                 background-size: cover;
-                 background-position: center;
-                 background-repeat: no-repeat;
-                 height: 100vh;
-                 
- 
-       backdrop-filter: blur(5px);
-     }
+
+
      .leaderboard {
        width: 450px;
-       margin-top:50px ;
-       margin-left: 520px;
- 
+       
+margin: auto;
+margin-top:100px ;
        border: 1px solid #ddd;
        border-radius: 20px;
        overflow: hidden;
@@ -32,9 +27,8 @@ body {
        text-align: center;
        padding: 10px;
        font-size: 40px;
-       height: 50px;
-       font-family: Rubik
-       ;
+       height: 80px;
+       font-family: Space Age;
 
  
      }
@@ -45,7 +39,7 @@ body {
        align-items: center;
        padding: 10px;
        border-bottom: 1px solid #ddd;
-       height: 50px;
+       height: 60px;
        font-family: 'Rubik', sans-serif;
      }
  
@@ -69,32 +63,40 @@ body {
      @media screen and (max-width: 1200px) {
       .leaderboard {
         width: 400px;
-        margin-left: 25%;
-        margin-top: 10%;
-
+margin: auto;
+        margin-top: 15%;
+        height: 80%;
       }
+
     }
  
      @media screen and (max-width: 1000px) {
        .leaderboard {
          width: 400px;
-         margin-left: 25%;
+         margin: auto;
          margin-top: 10%;
+         height: 80%;
  
        }
      }
      @media screen and (max-width: 800px) {
        .leaderboard {
          width: 70%;
-         margin-left: 15%;
-         margin-top: 10%;
+margin: auto;
+         margin-top: 15%;
+         height: 80%;
          
        }
      }
      @media screen and (max-width: 600px) {
       .leaderboard {
         width: 90%;
-        margin-left: 5%;
-        margin-top: 10%;
+margin: auto;
+        margin-top: 25%;
+        height: 80%;
+        font-size: 2rem;
       }
+      .leaderboard-header{
+      font-size: 3rem;}
+
     }
